@@ -27,7 +27,7 @@ main {
   height: 844px;
   background-image: linear-gradient(to bottom, rbga(0, 0, 0, 0.2), rbga(0, 0, 0, 0.75));
   padding: 25px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .search-box {
