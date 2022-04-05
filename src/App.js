@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-const api = {
-  key: 'e64c160bec9b5c99d024ff8b83d57280',
-  base: 'http://api.openweathermap.org/data/2.5/',
-};
+
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 function App2() {
   const [query, setQuery] = useState('');
@@ -11,7 +9,7 @@ function App2() {
 
   const search = (evt) => {
     if (evt.key === 'Enter') {
-      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${api.key}&units=imperial`)
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${API_KEY}&units=imperial`)
         .then((res) => res.json())
         .then((result) => {
           setWeather(result);
